@@ -27,7 +27,7 @@ client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
   console.log('')
   console.log('')
 });
-const adminprefix = "!";
+const adminprefix = "BL!help";
 const devs = ['ايديك','ايدي اخويك'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
@@ -51,6 +51,13 @@ if (message.content.startsWith(adminprefix + 'setT')) {
     message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
 }
 });
-
+lient.on('message', message => {
+    if(message.author.bot) return;
+    let args = message.content.split(' ');
+    let prefix = "-"; 
+    
+    if(args[0] === `${prefix}avatar`){
+        let mentions = message.mentions.members.first()
+        if(!mentions) {
 
 client.login(process.env.BOT_TOKEN);
