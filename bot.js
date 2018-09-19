@@ -747,14 +747,5 @@ client.on('message', message => {
         .setFooter('المزيد قريبا ان شاء الله!')
       message.channel.send(helpEmbed);
     }
-});
-
-client.login(process.env.BOT_TOKEN);
-
-    © 2018 GitHub, Inc.
-    Terms
-    Privacy
-    Security
-    Status
-    Help
+});   
 client.login(process.env.BOT_TOKEN);
