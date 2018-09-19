@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = 'BL!help'
+const prefix = 'BL!p'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -54,7 +54,7 @@ if (message.content.startsWith(adminprefix + 'setT')) {
 lient.on('message', message => {
     if(message.author.bot) return;
     let args = message.content.split(' ');
-    let prefix = "-"; 
+    let prefix = "BL!"; 
     
     if(args[0] === `${prefix}avatar`){
         let mentions = message.mentions.members.first()
