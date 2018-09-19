@@ -28,7 +28,7 @@ client.user.setGame(`Nothing`,"http://twitch.tv/S-F")
   console.log('')
 });
 const adminprefix = "!";
-const devs = ['ايديك','ايدي اخويك'];
+const devs = ['347379495528824832'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
