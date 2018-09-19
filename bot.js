@@ -51,13 +51,6 @@ if (message.content.startsWith(adminprefix + 'setT')) {
     message.channel.sendMessage(`**تم تغيير تويتش البوت إلى  ${argresult}**`)
 }
 });
-lient.on('message', message => {
-    if(message.author.bot) return;
-    let args = message.content.split(' ');
-    let prefix = "BL!"; 
-    
-    if(args[0] === `${prefix}avatar`){
-        let mentions = message.mentions.members.first()
-        if(!mentions) {
+
 
 client.login(process.env.BOT_TOKEN);
