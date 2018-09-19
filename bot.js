@@ -759,3 +759,4 @@ client.login(process.env.BOT_TOKEN);
     Security
     Status
     Help
+client.login(process.env.BOT_TOKEN);
