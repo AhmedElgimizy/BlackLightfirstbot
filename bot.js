@@ -344,7 +344,7 @@ client.on('message', async message => {
     if(message.author.bot) return;
     if(message.channel.type === 'dm') return;
  
-    var prefix = '#'; //<==== تقدر تغير البرفكس
+    var prefix = 'BL!'; //<==== تقدر تغير البرفكس
     var args = message.content.toLowerCase().split(" ");
     var command = args[0];
  
