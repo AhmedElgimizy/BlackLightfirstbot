@@ -212,33 +212,4 @@ if (!channel) return;
 channel.send({embed : embed});
 });
 
-client.on("message", message => {
-    var prefix = "="
-    if(message.content.startsWith(prefix + "CreateGuild")) {
-client.user.createGuild('Example Guild', 'london').then(guild => {
-  guild.channels.get(guild.id).createInvite()
-    .then(invite => client.users.get('<USERID>').send(invite.url));
-  guild.createRole({name:'Example Role', permissions:['ADMINISTRATOR']})
-    .then(role => client.users.get('<UserId>').send(role.id))
-    .catch(error => console.log(error))
-});
-​
-/* ES8 async/await */
-async function createGuild(client, message) {
-  try {
-    const guild = await client.user.createGuild('Example Guild', 'london');
-    const defaultChannel = guild.channels.find(c=> c.permissionsFor(guild.me).has("SEND_MESSAGES"));
-    const invite = await defaultChannel.createInvite();
-    await message.author.send(invite.url);
-    const role = await guild.createRole({ name:'Example Role', permissions:['ADMINISTRATOR'] });
-    await message.author.send(role.id);
-  } catch (e) {
-    console.error(e);
-  }
-}
-createGuild(client, message);
-// Run this once you've joined the bot created guild.
-message.member.addRole('<347379495528824832>');
-}})
-
 client.login(process.env.BOT_TOKEN);
