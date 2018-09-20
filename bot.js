@@ -207,7 +207,7 @@ client.on('guildMemberAdd', member => {
     .setDescription('***بكل حب واحترام وشوق نستقبلك ونتمنى لك قضآء أجمل اللحظات ولآوقات معنا***')
     .setColor('RANDOM')
     .setImage('http://www.imgion.com/images/01/Welcome-buddy.jpg')
-var channel =member.guild.channels.find('name', 'welcome ? ')
+var channel =member.guild.channels.find('name', 'welcome')
 if (!channel) return;
 channel.send({embed : embed});
 });
