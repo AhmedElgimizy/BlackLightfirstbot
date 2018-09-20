@@ -459,7 +459,7 @@ client.on('message', message => {
 if(message.content.startsWith(prefix + 'bc')) {
 if(!message.channel.guild) return message.channel.send('**هذا الأمر فقط للسيرفرات**').then(m => m.delete(5000));
 if(!message.member.hasPermission('ADMINISTRATOR')) return      message.channel.send('**للأسف لا تمتلك صلاحية** `ADMINISTRATOR`' );
-let args = message.content.split(" ").join(" ").slice(2 + prefix.length);
+let args = message.content.split("BL! ").join("BL! ").slice(2 + prefix.length);
 let BcList = new Discord.RichEmbed()
 .setThumbnail(message.author.avatarURL)
 .setAuthor(`محتوى الرساله ${args}`)
@@ -478,7 +478,7 @@ let NormalBc = msg.createReactionCollector(NormalBcFilter, { time: 60000 });
 EmbedBc.on("collect", r => {
 message.channel.send(`:ballot_box_with_check: تم ارسال الرساله بنجاح`).then(m => m.delete(5000));
 message.guild.members.forEach(m => {
-var bc = new
+var bc = BL!
 Discord.RichEmbed()
 .setColor('RANDOM')
   .setTitle('`-Broadcast-`')
