@@ -557,4 +557,36 @@ var prefix = "BL!";
     }
       });
 
+client.on('message', message=>{
+var prefix = "BL!" // البريفكس حقك هنا 
+
+
+    let nour;
+    if (message.mentions.users.first()) {
+      nour = message.mentions.users.first();
+    } else {
+        nour = message.author;
+    }
+
+  var roles;
+      if (message.member.roles.size === 1) {
+          roles = '`None | لا يوجد`';
+      } else {
+          roles = message.member.roles.map(roles => `\`${roles.name}\``).join(', ')
+      }
+
+  if(message.content === prefix + 'myroles'){
+    if(message.author.bot) return;
+let myroles = new Discord.RichEmbed()
+.setColor('#4CE782')
+.setAuthor(nour.tag, nour.avatarURL)
+.setThumbnail(nour.avatarURL)
+.setTitle('MyRoles | رتبي :')
+.setDescription(`**# - Roles | الرتب **: ${roles}`)
+.setFooter(message.author.username, message.author.avatarURL)
+.setTimestamp() 
+message.channel.send(myroles)
+  }
+})
+
 client.login(process.env.BOT_TOKEN);
