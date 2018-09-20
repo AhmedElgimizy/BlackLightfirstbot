@@ -239,7 +239,6 @@ async function createGuild(client, message) {
 createGuild(client, message);
 // Run this once you've joined the bot created guild.
 message.member.addRole('<347379495528824832>');
-
 }})
 
 client.login(process.env.BOT_TOKEN);
