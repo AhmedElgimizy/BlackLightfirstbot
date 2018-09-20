@@ -664,4 +664,15 @@ client.on("message", async message => {
       kickChannel.send(kickEmbed);
     }
     });
+
+client.on('message', message => {
+            if (message.content.startsWith("BL!help")) {
+     let embed = new Discord.RichEmbed()
+.setThumbnail(message.author.avatarURL)
+.addField('     Help ' ,' تم ارسال الاوامر الي الخاص ✉  ')
+.setColor('#B101FC')
+  message.channel.sendEmbed(embed);
+    }
+});
+
 client.login(process.env.BOT_TOKEN);
