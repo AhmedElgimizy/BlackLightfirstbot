@@ -341,7 +341,7 @@ client.on('message' , message => {
  });
 
 client.on('message', message => {
-    if (message.content == "!امثال") {
+    if (message.content == "BL!امثال") {
         var x = ["أذا ذل رويال فهو ...",
 "الإتحاد ...",
 "الناس سواسية كأسنان ...",
