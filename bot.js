@@ -728,61 +728,34 @@ const pubg = [
  }
 });
 
-client.on('message', message => {
-if (!points[message.author.id]) points[message.author.id] = {
-    points: 0,
-  };
-  if(!message.guild) return;
-    let id = message.author.id,prefix="BL!";
-    if (spee[id] && (new Date).getTime() - spee[id] < 15*1000) {
-        let r = (new Date).getTime() - spee[id];
-        r = 15*1000 - r;
-    message.channel.send(`**Sorry, Please Wait ${pretty(r, {verbose:true})}...**`).then(m => m.delete(5000));
-    return;
-    }
-    if ( message.content == prefix+'speed'){
-       
-        try{
-}catch(e){
- 
-}
- 
-    if(!message.channel.guild) return message.reply('**هذا الأمر للسيرفرات فقط**').then(m => m.delete(3000));
- 
- 
-const item = type[Math.floor(Math.random() * type.length)];
-const filter = response => {  
-    return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
-};
-message.channel.send('**Game is Start now...!**').then(msg => {
- 
- const embed = new Discord.RichEmbed()
- .setColor("0054dd")
-     .setAuthor(`⏳ |You have »15« seconds to type the word`)
-          .setImage(`${item.type}`)
- .setFooter(`${message.author.tag}`, message.author.avatarURL)
- 
- 
-         
-msg.channel.send(embed).then(() => {
-        message.channel.awaitMessages(filter, { maxMatches: 1, time: 15000, errors: ['time'] })
-        .then((collected) => {
-                  const sh = new Discord.RichEmbed()
-  .setColor("04791c")
-  .setDescription('**✅ |Good Job +1P**')
-   .setFooter(`${collected.first().author}`)
-  message.channel.sendEmbed(sh);
-            let won = collected.first().author; // في هذا السطر يقوم الكود بسحب الأي دي الذي قام بالأجابة اولاً
-            points[won.id].points++;
-          })
-          .catch(collected => { // في حال لم يقم أحد بالإجابة
-            message.channel.send(`🔚 |**Time Is End**`);
-          })
-        })
-    })
-    spee[id] = (new Date).getTime()
-}
-});
+const d = require("discord.js");
+const client = new d.Client();
+var prefix ="BL!"//:3 غيره بكيفك
+var colors = new Array(100);
 
+client.on("message", (message) => {
+    var command = message.content.split(" ")[0].slice(prefix.length);
+    switch(command) {
+        case "create-colors" :
+        if (!message.channel.type == "text") return;
+        if (!message.member.hasPermission("MANAGE_ROLES")) return
+        for(var x = 0;x<colors.length;x++){
+            message.guild.createRole({name : x, color : colors[x]});
+        };
+    };
+}).login("توكن الوت.");
+function sin_to_hex(i, phase) {
+    var sin = Math.sin(Math.PI / size * 2 * i + phase);
+    var int = Math.floor(sin * 127) + 128;
+    var hex = int.toString(16);
+  
+    return hex.length === 1 ? '0'+hex : hex;
+};
+for(var x=0;x<colors.length;x++) {
+    let r   = sin_to_hex(i, 0 * Math.PI * 2/3);
+    let b  = sin_to_hex(i, 1 * Math.PI * 2/3);
+    let g = sin_to_hex(i, 2 * Math.PI * 2/3);
+    colors[x] = '#'+ r + g + b;
+};
 
 client.login(process.env.BOT_TOKEN);
