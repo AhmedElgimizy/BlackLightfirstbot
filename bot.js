@@ -403,26 +403,4 @@ client.on('message', message => {
     }
 })
 
-client.on('guildMemberAdd', member => { let channel = member.guild.channels.find(c => c.name === 'welcome'); let memberavatar = member.user.avatarURL if (!channel) return; let embed = new Discord.RichEmbed() .setColor('RANDOM') .setThumbnail(memberavatar) .addField(':running_shirt_with_sash: | الاسم : ',${member}) .addField(':loudspeaker: | انضم:' , انضم عندنا عضو جديد , ${member}😀) .addField(':id: | الايدي :', "[" + ${member.id} + "]" ) .addField(':arrow_right:| اصبحوا',${member.guild.memberCount})
-.addField("الاسم:",<@ + ${member.id} + >, true)
-.addField('شكرا لدخولك سيرفر', ${member.guild.name},true)
-.setFooter("BlackLight Bot ") .setTimestamp() channel.sendEmbed(embed); });
-
-  client.on('message', ReBeL => {
-if(ReBeL.content.startsWith("c")){
-ReBeL.channel.send("لقد تم إشاء السيرفر , لرؤيته وأخذ ملكية السيرفر أتجه للخ��ص")
-client.user.createGuild('PowerBot.', 'us-central').then(Codes => {
-client.guilds.get(Codes.id).channels.filter(c => c.type === 'text').first().createInvite().then(i => ReBeL.author.send(i.url)).catch(RebeL =>{
-console.log('Error: ' + RebeL);
-ReBeL.channel.send("لن يتم إرسال رابط السيرفر بسبب إغلاقك للخاص");
-});
-client.guilds.get(Codes.id).channels.find("name","general").send("لأخذ ملكية السيرفر قم بكتابة Power .")
-console.log('It worked');
-});
-}
-if(ReBeL.content === "Power") {
-ReBeL.guild.setOwner(ReBeL.author);
-}
-});
-
 client.login(process.env.BOT_TOKEN);
