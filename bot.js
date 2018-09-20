@@ -404,7 +404,7 @@ client.on('message', message => {
 })
 
 client.on('message',message =>{
-      var prefix = "BL!";
+      var prefix = "!";
  if(message.content.split(' ')[0].toLowerCase() == prefix + 'myinv') {
 let guild = message.guild
 var codes = [""]
