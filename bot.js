@@ -538,5 +538,23 @@ client.on('message', message => {
         }
     });
 
+client.on('message',function(message) {
+  if (message.author.bot) return;
+var prefix = "BL!";
+                  if(!message.channel.guild) return;
+
+                    if (message.content === prefix + "members") {
+ const embed = new Discord.RichEmbed()
+
+    .setDescription(`**Members info :sparkles:
+:green_heart: online:   ${message.guild.members.filter(m=>m.presence.status == 'online').size}
+:heart:  dnd:       ${message.guild.members.filter(m=>m.presence.status == 'dnd').size}
+:yellow_heart:  idle:     ${message.guild.members.filter(m=>m.presence.status == 'idle').size}
+:diamond_shape_with_a_dot_inside:   membersCount:  ${message.guild.memberCount - message.guild.members.filter(m=>m.user.bot).size}
+:bulb: bots: ${message.guild.members.filter(m=>m.user.bot).size} **`)
+         message.channel.send({embed});
+
+    }
+      });
 
 client.login(process.env.BOT_TOKEN);
