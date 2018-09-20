@@ -538,29 +538,5 @@ client.on('message', message => {
         }
     });
 
-client.on('message',async message => {
-    if (message.content.startsWith("BL!mcstats")) {
-        var cont = message.content.slice(prefix.length).split(" ");
 
-  var args = cont.slice(1);
-let mcIP = args[0];
-
-
-  let {body} = await superagent
-  .get('http://mcapi.us/server/status?ip=' + mcIP);
-  let status = body.online ? "✅" : "❎";
-
-  let embed = new Discord.RichEmbed()
-  .setTitle(• ${mcIP} Info)
-  .setThumbnail('https://vignette.wikia.nocookie.net/minecraftpocketedition/images/f/f1/Minecraft_1.2_Logo.png/revision/latest?cb=20171204231225%27)
-  .setColor(body.online ? #008000 : #F0141E)
-  .addField('• السيرفر شغال', status)
-  .addField('• اللاعبين', body.players.now, true)
-  .addField('• الحد الاقصى للاعبين', body.players.max, true);
-  message.channel.send(embed);
-
-  return
-  }
-});
-            
 client.login(process.env.BOT_TOKEN);
