@@ -510,46 +510,17 @@ client.on("message", (message) => {
  
 });
 
-client.on('message',async message => {
- var prefix "BL!"
-  if(message.content.startsWith(prefix + "bc")) {
-    let filter = m => m.author.id === message.author.id;
-    let thisMessage;
-    let thisFalse;
-    message.channel.send(':regional_indicator_b::regional_indicator_c:| **ارسل الرسالة الان**').then(msg => {
-
-    let awaitM = message.channel.awaitMessages(filter, {
-      max: 1,
-      time: 20000,
-      errors: ['time']
-    })
-    .then(collected => {
-      collected.first().delete();
-      thisMessage = collected.first().content;
-      msg.edit(':regional_indicator_b::regional_indicator_c:| **هل انت متأكد؟ اجب ب الارسال  ب نعم او لا**');
-      let awaitY = message.channel.awaitMessages(response => response.content === 'نعم' || 'لا' && filter,{
-        max: 1,
-        time: 20000,
-        errors: ['time']
-      })
-      .then(collected => {
-        if(collected.first().content === 'لا') {
-          msg.delete();
-          message.delete();
-          thisFalse = false;
+client.on("message", message => {
+    var prefix = "!"
+    if (!message.content.startsWith(prefix)) return;
+      let command = message.content.split(" ")[0];
+      command = command.slice(prefix.length);
+        if(command === "skin") {
+                const args = message.content.split(" ").slice(1).join(" ")
+        if (!args) return message.channel.send("** Type your skin name **");
+        const image = new Discord.Attachment(`https://visage.surgeplay.com/full/256/${args}`, "skin.png");
+    message.channel.send(image)
         }
-        if(collected.first().content === 'نعم') {
-          if(thisFalse === false) return;
-        message.guild.members.forEach(member => {
-          msg.edit(':regional_indicator_b::regional_indicator_c:| **جاري الارسال**');
-          collected.first().delete();
-          member.send(`${thisMessage}\n\n${member} ,\nتم الارسال من : ${message.guild.name}\n تم الارسال بواسطة : ${message.author.tag}`);
-        });
-        }
-      });
     });
-    });
-  }
-});    
 
 client.login(process.env.BOT_TOKEN);
