@@ -403,4 +403,9 @@ client.on('message', message => {
     }
 })
 
+client.on('guildMemberAdd', member => { let channel = member.guild.channels.find(c => c.name === 'welcome'); let memberavatar = member.user.avatarURL if (!channel) return; let embed = new Discord.RichEmbed() .setColor('RANDOM') .setThumbnail(memberavatar) .addField(':running_shirt_with_sash: | الاسم : ',${member}) .addField(':loudspeaker: | انضم:' , انضم عندنا عضو جديد , ${member}😀) .addField(':id: | الايدي :', "[" + ${member.id} + "]" ) .addField(':arrow_right:| اصبحوا',${member.guild.memberCount})
+.addField("الاسم:",<@ + ${member.id} + >, true)
+.addField('شكرا لدخولك سيرفر', ${member.guild.name},true)
+.setFooter("Black Light ") .setTimestamp() channel.sendEmbed(embed); });
+
 client.login(process.env.BOT_TOKEN);
