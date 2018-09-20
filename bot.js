@@ -659,4 +659,15 @@ message.channel.send({embed:embed});
 }
 });
 
+client.on ("guildMemberAdd", member => {
+  
+   var role = member.guild.roles.find ("Member", "اسم الرتبة");
+   member.addRole (role);
+  
+})
+
+client.on ("guildMemberRemove", member => {
+   
+})
+
 client.login(process.env.BOT_TOKEN);
