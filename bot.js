@@ -212,4 +212,17 @@ if (!channel) return;
 channel.send({embed : embed});
 });
 
+var botid = ["491985375934283786"];
+   client.on('message', message => {
+       if(message.content.startsWith(`${prefix}invite`)){
+           if(!message.channel.guild) return message.channel.send("This Command is Just For Servers!")
+           var embed = new Discord.RichEmbed()
+           .setTitle("Invite Me !.")
+           .setURL(`https://discordapp.com/oauth2/authorize/?permissions=8&scope=bot&client_id=${botid}`)
+           .setTimestamp()
+           .setColor("RANDOM")
+           message.channel.send({embed})
+       }
+   });
+
 client.login(process.env.BOT_TOKEN);
