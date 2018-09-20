@@ -589,14 +589,4 @@ message.channel.send(myroles)
   }
 })
 
-lient.on('message', message =>{
-    if(message.content === 'BL!ping'){
-let start = Date.now(); message.channel.send('pong').then(message => { 
-message.edit(`\`\`\`js
-Time taken: ${Date.now() - start} ms
-Discord API: ${client.ping.toFixed(0)} ms\`\`\``);
-    });
-    }
-});
-
 client.login(process.env.BOT_TOKEN);
