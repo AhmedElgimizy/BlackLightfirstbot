@@ -267,4 +267,12 @@ var cont = message.content.slice(prefix.length).split(" ");
     } 
 });
 
+client.on('message', message=> {
+    if (message.author.bot) return;
+    if (message.isMentioned(client.user))
+    {
+    message.reply(" هلا !!");
+    }
+});
+
 client.login(process.env.BOT_TOKEN);
