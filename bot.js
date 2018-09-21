@@ -775,4 +775,53 @@ client.on('message', message => {
     }
 });
 
+client.on('message', async message => {//alphacodes
+  if(message.content.startsWith(prefix + "تقديم")) {//alphacodes
+    await message.channel.send("** :question:  حسنا, قم بكتابة اسمك ,  عمرك, خبرتك**").then(e => {//alphacodes
+    let filter = m => m.author.id === message.author.id//alphacodes
+    let lan = '';//alphacodes
+    let md = '';//alphacodes
+    let br = '';//alphacodes
+    let chaLan = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })//alphacodes
+    .then(collected => {//alphacodes
+      lan = collected.first().content//alphacodes
+      collected.first().delete()//alphacodes
+e.delete();//alphacodes
+     message.channel.send('**رائع الأن قم بكتابة مميزاتك :question:**').then(m => {//alphacodes
+let chaMd = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })//alphacodes
+.then(co => {//alphacodes
+  md = co.first().content//alphacodes
+        co.first().delete()//alphacodes
+        m.delete();//alphacodes
+message.channel.send('**اخيرا وليس اخرا, قم بكتابة عدد السيرفرات والمستخدمين التي دخلت فيها .. اكتب ايضا لماذا سنقوم بقبولك ؟ :question: **').then(ms => {//alphacodes
+let br = message.channel.awaitMessages(filter, { max: 1, time: 40000, errors: ['time'] })//alphacodes
+.then(col => {//alphacodes
+  br = col.first().content//alphacodes
+        col.first().delete()//alphacodes
+ 
+ms.delete()//alphacodes
+ 
+ message.channel.send('جاري التقديم ..').then(b => {//alphacodes
+        setTimeout(() => {//alphacodes
+  b.edit(`**تم التقديم وسيتم الرد فـ اقرب وقت**`)//alphacodes
+        },2000);
+var gg = message.guild.channels.find('تقديم-ادارة') //alphacodes
+if(!gg) return;
+if(gg) {
+gg.send({embed : new Discord.RichEmbed()
+.setDescription(`**  عدد سيرفرات التي قام بادارتها او التعاون معها+  ماذا سيقدم لنا ..:question:  : \n ${lan}\nالمميزات :link: :\n ${md} \nخبرته و عمره و اسمه  :question: :\n ${br}  \nتم التقديم بواسطة  : <@${message.author.id}> **`)  
+          .setFooter(` Alphacodes.`)
+.setTimestamp()
+});
+})
+}        
+})
+})
+})
+})
+})
+})
+ }
+})
+    
 client.login(process.env.BOT_TOKEN);
