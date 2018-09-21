@@ -728,6 +728,7 @@ const pubg = [
  }
 });
 
+var prefix = "BL!";
  client.on('message', message => {
     let args = message.content.split(' ').slice(1);
     if(message.content.startsWith(prefix + 'role')) {
