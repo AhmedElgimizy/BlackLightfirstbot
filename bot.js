@@ -728,4 +728,33 @@ const pubg = [
  }
 });
 
+client.on("message", async message => {
+  if(message.author.bot) return;
+  if(message.channel.type === "dm") return;
+
+  let prefix = "BL!";
+  let messageArray = message.content.split (" ");
+  let cmd = messageArray[0];
+  let args = messageArray.slice(1);
+
+
+
+if(cmd === `${prefix}8ball`){
+
+
+if(!args[1]) return message.reply("?");
+let replies = ["يب", "لا.", "ما بعرف.", "اسالني لاحقا لو سمحت"];
+
+  let result = Math.floor((Math.random() * replies.length));
+  let question = args.slice(1).join(" ");
+
+       message.channel.sendMessage(`${replies[Math.floor(Math.random() * replies.length)]}`);   ///Alpha Codes 
+                   if (!args[0]) {
+              message.edit('1')
+              return;
+            }
+        }
+    });
+});
+
 client.login(process.env.BOT_TOKEN);
