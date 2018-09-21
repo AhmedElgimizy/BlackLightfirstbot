@@ -775,7 +775,6 @@ client.on('message', message => {
     }
 });
 
-const Discord = require("discord.js");
 const fs = require("fs");
 const lol = JSON.parse(fs.readFileSync("lol.json", "utf8"))
 const client = new Discord.Client();
