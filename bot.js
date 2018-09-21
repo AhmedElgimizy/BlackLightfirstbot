@@ -60,6 +60,7 @@ if (message.content.startsWith(prefix + 'help')) { //ALPHACODES
 :gem:  البوت فيه كثير ميزات حلوة و جميلة
  ا:rocket: البوت يعمل 24 ساعه 
 بوت يمتلك مضد جحفله +سبام+نشر روابط+مضاد سب :gear: 
+Bot Link https://discordapp.com/api/oauth2/authorize?client_id=491985375934283786&permissions=0&scope=bot
 **
         ***__General orders__***
 **
