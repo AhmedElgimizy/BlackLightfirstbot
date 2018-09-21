@@ -66,7 +66,7 @@ Bot Link https://discordapp.com/api/oauth2/authorize?client_id=49198537593428378
 **
 『BL!allbots/لعرض جميع البوتات الي بالسيرفر』
 『BL!server/يعرض لك معلومات عن السيرفر』
-『BL!bot/يعرض لك كل معلومات البوت』
+『BL!botinfo/يعرض لك كل معلومات البوت』
 『BL!skin <name>/يعرض لك سكنك بماين كرافت』
 『BL!invites/ يعرض لك  عدد انفايتاتك بالسيرفر 』
 『BL!invite-codes/يعرض لك روابط الانفايتات حكك في السيرفر 』
