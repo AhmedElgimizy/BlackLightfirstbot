@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
+const points = require('./points.json')
 const prefix = 'BL!'
 
 client.on('ready', () => {
