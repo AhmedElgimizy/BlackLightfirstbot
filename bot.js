@@ -715,4 +715,16 @@ const pubg = [
  }
 });
 
+client.on('message', message => {
+       if(message.content.startsWith(`${prefix}support`)){
+           if(!message.channel.guild) return message.channel.send("This Command is Just For Servers!")
+           var embed = new Discord.RichEmbed()
+           .setTitle("Support Server")
+           .setURL("https://discord.gg/V4a9F3Z")
+           .setTimestamp()
+           .setColor("RANDOM")
+           message.channel.send({embed})
+       }
+   });
+
 client.login(process.env.BOT_TOKEN);
