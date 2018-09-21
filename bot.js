@@ -728,7 +728,6 @@ const pubg = [
  }
 });
 
-Client.on("message", message => {
 	var prefix = "BL!";
 	var args = message.content.split(' ').slice(1); 
 	var msg = message.content.toLowerCase();
