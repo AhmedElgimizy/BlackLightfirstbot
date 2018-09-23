@@ -964,5 +964,74 @@ client.on('message', ra3d => {
             }
        });
 
-  
+  client.on('message', msg => {
+  if(msg.content === 'Bl!تقديم')
+              setTimeout(function() {  
+msg.reply('كم عمرك')
+              }, 1)
+});
+
+client.on('message', msg => {
+  if(msg.content === '11')
+              setTimeout(function() {  
+msg.reply('تعرف تبرمج ب اكواد جافا سكربت')
+              }, 1)
+});
+
+client.on('message', msg => {
+  if(msg.content === '12')
+              setTimeout(function() {  
+msg.reply('تعرف تبرمج ب اكواد جافا سكربت')
+              }, 1)
+});
+
+client.on('message', msg => {
+  if(msg.content === '13')
+              setTimeout(function() {  
+msg.reply('تعرف تبرمج ب اكواد جافا سكربت  ')
+              }, 1)
+});
+
+client.on('message', msg => {
+  if(msg.content === '14')
+              setTimeout(function() {  
+msg.reply('تعرف تبرمج ب اكواد جافا سكربت ')
+              }, 1)
+});
+
+client.on('message', msg => {
+  if(msg.content === '15')
+              setTimeout(function() {  
+msg.reply('تعرف تبرمج ب اكواد جافا سكربت')
+              }, 1)
+});
+
+client.on('message', msg => {
+  if(msg.content === 'نعم')
+              setTimeout(function() {  
+msg.reply('اوك تمام .. عملت بوتات قبل كدا ؟')
+              }, 1)
+});
+
+client.on('message', msg => {
+  if(msg.content === 'لا')
+              setTimeout(function() {  
+msg.reply('اوك تمام عملت .. عملت بوتات قبل كدا ؟')
+              }, 1)
+});
+
+client.on('message', msg => {
+  if(msg.content === 'يب ')
+              setTimeout(function() {  
+msg.reply('اوك تمام يتم الرد عليك ف اقرب وقت ')
+              }, 1)
+});
+
+client.on('message', msg => {
+  if(msg.content === 'نو')
+              setTimeout(function() {  
+msg.reply('اوك سيتم الرد عليك فى اقرب وقت ')
+              }, 1)
+});
+
 client.login(process.env.BOT_TOKEN);
