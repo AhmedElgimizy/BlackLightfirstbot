@@ -965,7 +965,7 @@ client.on('message', ra3d => {
        });
 
   client.on('message', msg => {
-  if(msg.content === 'Bl!تقديم')
+  if(msg.content === 'BL!تقديم')
               setTimeout(function() {  
 msg.reply('كم عمرك')
               }, 1)
