@@ -1062,6 +1062,27 @@ var mentionned = message.mentions.members.first();
     }
 })
   
- 
+ client.on('message', message => {
+    if (message.content.startsWith("BL!avatar")) {
+        if (message.author.bot) return
+        var mentionned = message.mentions.users.first();
+    var omar;
+      if(mentionned){
+          var omar = mentionned;
+      } else {
+          var omar = message.author;
+          
+      }
+        const embed = new Discord.RichEmbed()
+        .setColor("RANDOM")
+        .setAuthor('Avatar Link :')
+        .setTitle('Click Here')
+        .setURL(`${omar.avatarURL}`)
+        .setImage(`${omar.avatarURL}`)
+        .setFooter('name bot',client.user.avatarURL) 
+      message.channel.sendEmbed(embed);
+    }
+});
+
   
 client.login(process.env.BOT_TOKEN);
