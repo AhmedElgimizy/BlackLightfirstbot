@@ -1051,9 +1051,6 @@ var mentionned = message.mentions.members.first();
 
          
      });
-
-@here
-   =-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- 
   
   client.on('typingStart', (ch, user) => {
     if(user.presence.status === 'offline') {
