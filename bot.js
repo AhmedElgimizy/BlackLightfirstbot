@@ -1021,7 +1021,7 @@ msg.reply('اوك تمام عملت .. عملت بوتات قبل كدا ؟')
 });
 
 client.on('message', msg => {
-  if(msg.content === 'يب ')
+  if(msg.content === 'يب')
               setTimeout(function() {  
 msg.reply('اوك تمام يتم الرد عليك ف اقرب وقت ')
               }, 1)
