@@ -1063,7 +1063,7 @@ var mentionned = message.mentions.members.first();
 })
   
  client.on('message', message => {
-    if (message.content.startsWith("BL!avatar")) {
+    if (message.content.startsWith("BL!myavatar")) {
         if (message.author.bot) return
         var mentionned = message.mentions.users.first();
     var omar;
