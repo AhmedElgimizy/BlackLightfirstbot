@@ -188,18 +188,6 @@ BL!slots
     }
 });
 
-client.on('guildMemberAdd', member => {
-    var embed = new Discord.RichEmbed()
-    .setThumbnail(member.user.avatarURL)
-  .addField("***شكرا الانضمامك الينا***" ,member.user.username )
-    .setDescription('***بكل حب واحترام وشوق نستقبلك ونتمنى لك قضآء أجمل اللحظات ولآوقات معنا***')
-    .setColor('RANDOM')
-    .setImage('http://www.imgion.com/images/01/Welcome-buddy.jpg')
-var channel =member.guild.channels.find('name', 'welcome')
-if (!channel) return;
-channel.send({embed : embed});
-});
-
 var botid = ["491985375934283786"];
    client.on('message', message => {
        if(message.content.startsWith(`${prefix}invite`)){
@@ -225,7 +213,7 @@ var cont = message.content.slice(prefix.length).split(" ");
             let nickchange = args.slice(0).join(" ");
             if (args[0] === undefined) {
                 message.channel.send("**ضع الاسم الذي تريده**")
-                return;
+                retur
             }
             message.guild.members.get(message.author.id).setNickname(nickchange).catch(err => {
                 message.channel.send("Error: " + err)
