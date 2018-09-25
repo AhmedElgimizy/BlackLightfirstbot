@@ -1249,7 +1249,6 @@ client.on('message', async message => {
   }
 });
 
-@here
 client.on("message", message => {
     var prefix = "BL!"
     if (!message.content.startsWith(prefix)) return;
