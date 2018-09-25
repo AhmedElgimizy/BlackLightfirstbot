@@ -1121,12 +1121,7 @@ client.on('guildMemberAdd', Sal => { //By Salto7#4595
     if (!channel) return;
     channel.send({embed : embed});
     });
-)
-    }
-});
-
-                                     
-                                             
+                                   
         
     
 
