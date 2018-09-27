@@ -1129,16 +1129,16 @@ client.on('message', async message => {
     var fromwhere = '';// Alpha Codes
     var fa2dh = '';// Alpha Codes
     var filter = m => m.author.id === message.author.id;// Alpha Codes
-    var subChannel = message.guild.channels.find(c => c.name === 'support-join');// Alpha Codes
+    var subChannel = message.guild.channels.find(c => c.name === 'التقديمات');// Alpha Codes
    
-    if(command == prefix + 'js') {// Alpha Codes
+    if(command == prefix + 'تقديم') {// Alpha Codes
         if(message.author.bot) return;
         if(message.channel.type === 'dm') return;
  
         var modRole = message.guild.roles.find(r => r.name === '✲ SUPPORT');// Alpha Codes
        
         if(message.guild.member(message.author).roles.has(modRole.id)) return message.channel.send(':x: | معك الرتبة');// Alpha Codes
-        if(!subChannel) return message.channel.send(':x: | يجب ان يتوفر روم اسمه `support-join`');// Alpha Codes
+        if(!subChannel) return message.channel.send('التقديمات');// Alpha Codes
        
         message.channel.send(':timer: | **اكتب اسمك الحقيقي الان من فضلك**').then(msgS => {
             message.channel.awaitMessages(filter, { max: 1, time: 30000, errors: ['time'] }).then(collected => {
