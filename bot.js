@@ -69,7 +69,6 @@ Bot Link https://discordapp.com/api/oauth2/authorize?client_id=49198537593428378
 『BL!botinfo/يعرض لك كل معلومات البوت』
 『BL!skin <name>/يعرض لك سكنك بماين كرافت』
 『BL!invites/ يعرض لك  عدد انفايتاتك بالسيرفر 』
-『BL!invite-codes/يعرض لك روابط الانفايتات حكك في السيرفر 』
 『BL!trans <language> <any thing>/يترجم لك الي تبيه من اي لغة』
 『BL!short/يختصر لك رابط كبير الى رابط صغير』
 『BL!tag/يكتب لك الكلمة بشكل جميل وكبير』
@@ -1403,28 +1402,5 @@ message.channel.sendMessage('**الرجاء الانتظار ريث ما يتم 
 }
 });
 
-client.on('message', message => {
-    if (message.content === "+createroles") {
-    if(!message.channel.guild) return message.channel.send('This Command Only For Servers !')
-            if (!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send(**${message.author.username} You Dont Have** ``MANAGE_ROLES`` **Premission**);
-
-      
-                     message.guild.createRole({ name: "Owner", color: "#ffffff", permissions: [] })
-                     message.guild.createRole({ name: "Co-Owner", color: "#ffffff", permissions: [] })
-                     message.guild.createRole({ name: "Leader", color: "#ffffff", permissions: [] })
-                     message.guild.createRole({ name: "Co-Leader", color: "#ffffff", permissions: [] })
-                     message.guild.createRole({ name: "King", color: "#ffffff", permissions: [] })
-                     message.guild.createRole({ name: "Qween", color: "#ffffff", permissions: [] })
-                     message.guild.createRole({ name: "HighNiss", color: "#ffffff", permissions: [] })
-                     message.guild.createRole({ name: "Pros", color: "#ffffff", permissions: [] })
-                     message.guild.createRole({ name: "VIP+", color: "#ffffff", permissions: [] })
-                     message.guild.createRole({ name: "VIP", color: "#ffffff", permissions: [] })
-                     message.guild.createRole({ name: "Actve", color: "#ffffff", permissions: [] })
-                     message.guild.createRole({ name: "Members", color: "#ffffff", permissions: [] })
-        
-
-message.channel.sendMessage('الرجاء الانتظار ريث ما يتم صناعه الرتب ')
-}
-});
 
 client.login(process.env.BOT_TOKEN);
