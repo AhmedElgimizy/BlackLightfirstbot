@@ -205,7 +205,7 @@ client.on('message',message => {
 var cont = message.content.slice(prefix.length).split(" ");
 
   var args = cont.slice(1);
-       if (message.content.startsWith("!nick")) {
+       if (message.content.startsWith("BL!nick")) {
    let nickmention = message.mentions.users.first()
     if (message.mentions.users.size === 0) {
         if (message.member.permissions.has("CHANGE_NICKNAME")) {
