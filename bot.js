@@ -1465,6 +1465,18 @@ client.on('message', msg => {
   }
 });
 
+client.on('message', msg => {
+  if(msg.content === 'هلا')
+              setTimeout(function() {  
+msg.reply('هلا حبي')
+              }, 1)
+});
 
+client.on('message', msg => {
+  if(msg.content === 'BL!colors')
+              setTimeout(function() {  
+msg.reply('https://cdn.discordapp.com/avatars/347379495528824832/53c7bed44f53256ff633e8e2a36d68a3.png?size=2048')
+              }, 1)
+});
 
 client.login(process.env.BOT_TOKEN);
