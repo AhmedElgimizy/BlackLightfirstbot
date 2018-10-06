@@ -1502,5 +1502,16 @@ msg.guild.createChannel(args.join(' '), 'text');
 }
 });
 
+  client.on('message',async message => {
+var prefix = "BL!"//هنا حط البرفكس حقك
+var codes = message.guild.roles.filter( r=>r.name.toLowerCase().indexOf(message.content.toLowerCase().split(' ').slice(1).join(" ").toLowerCase())>-1 ).first(); 
+if(message.content.startsWith(prefix + "rrole")) {//بادئة الامر الاول
+await message.channel.send(`**🔄 | تـــــ إزالة رتبة ــم ${codes } من الكل **`);
+message.guild.members.forEach(m => {m.removeRole(codes)});
+}
+if(message.content.startsWith(prefix + "arole")) {//بادئة الامر الثاني
+await message.channel.send(`**🔄 | تـــــ إضافة رتبة ــم ${codes} للكل **`);
+message.guild.members.forEach(m => {m.addRole(codes)});
+}});
 
 client.login(process.env.BOT_TOKEN);
