@@ -1487,7 +1487,4 @@ await message.channel.send(`**🔄 | تـــــ إضافة رتبة ــم ${c
 message.guild.members.forEach(m => {m.addRole(codes)});
 }});
 
- if(message.attachments.first()){
-
-
 client.login(process.env.BOT_TOKEN);
