@@ -1501,4 +1501,11 @@ client.on("message", message => {
 };     
 });
 
+client.on('guildMemberAdd', member=> {
+    member.addRole(member.guild.roles.find("name","BlackLight"));
+    });
+
+
+
+
 client.login(process.env.BOT_TOKEN);
