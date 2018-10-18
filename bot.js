@@ -209,7 +209,7 @@ client.on('message', message=> {
 });
 
 client.on('message' , message => {
-  var prefix = "BL!";
+  var prefix = "#";
   if(message.author.bot) return;
  
   if(message.content.startsWith(prefix + "xo")) {
@@ -274,7 +274,7 @@ client.on('message' , message => {
  });
 
 client.on('message', message => {
-    if (message.content == "BL!امثال") {
+    if (message.content == "#امثال") {
         var x = ["أذا ذل رويال فهو ...",
 "الإتحاد ...",
 "الناس سواسية كأسنان ...",
@@ -337,7 +337,7 @@ client.on('message', message => {
 })
 
 client.on('message', function(msg) {
-    const prefix = 'BL!'
+    const prefix = '#'
     if(msg.content.startsWith (prefix  + 'server')) {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
@@ -358,7 +358,7 @@ client.on('message', function(msg) {
 
 client.on ('message',async Sal => { //By Salto7#4595
     let embed = new Discord.RichEmbed()
-    if (Sal.content === "BL!id") {
+    if (Sal.content === "#id") {
       let embed = new Discord.RichEmbed()
      .setColor("RANDOM")
      .setThumbnail(Sal.author.avatarURL)
@@ -372,7 +372,7 @@ client.on ('message',async Sal => { //By Salto7#4595
   });
 
 client.on('message', message => {
-if(message.content.startsWith("BL!slots")) {
+if(message.content.startsWith("#slots")) {
   let slot1 = ['🍏', '🍇', '🍒', '🍍', '🍅', '🍆', '🍑', '🍓'];
   let slots1 = `${slot1[Math.floor(Math.random() * slot1.length)]}`;
   let slots2 = `${slot1[Math.floor(Math.random() * slot1.length)]}`;
@@ -389,7 +389,7 @@ if(message.content.startsWith("BL!slots")) {
 
 client.on("message", (message) => {
     /// ALPHA CODES
-   if (message.content.startsWith("BL!ticket")) {     /// ALPHA CODES
+   if (message.content.startsWith("#ticket")) {     /// ALPHA CODES
         const reason = message.content.split(" ").slice(1).join(" ");     /// ALPHA CODES
         if (!message.guild.roles.exists("name", "Support Team")) return message.channel.send(`This server doesn't have a \`Support Team\` role made, so the ticket won't be opened.\nIf you are an administrator, make one with that name exactly and give it to users that should be able to see tickets.`);
         if (message.guild.channels.exists("name", "ticket-{message.author.id}" + message.author.id)) return message.channel.send(`You already have a ticket open.`);    /// ALPHA CODES
@@ -420,10 +420,10 @@ client.on("message", (message) => {
     }
  
  
-  if (message.content.startsWith("BL!close")) {
+  if (message.content.startsWith("#close")) {
         if (!message.channel.name.startsWith(`ticket-`)) return message.channel.send(`You can't use the close command outside of a ticket channel.`);
  
-       message.channel.send(`Are you sure? Once confirmed, you cannot reverse this action!\nTo confirm, type \`Bl!confirm\`. This will time out in 10 seconds and be cancelled.`)
+       message.channel.send(`Are you sure? Once confirmed, you cannot reverse this action!\nTo confirm, type \`#confirm\`. This will time out in 10 seconds and be cancelled.`)
            .then((m) => {
                message.channel.awaitMessages(response => response.content === 'BL!confirm', {
                        max: 1,
@@ -446,7 +446,7 @@ client.on("message", (message) => {
 
 client.on('message',function(message) {
   if (message.author.bot) return;
-var prefix = "BL!";
+var prefix = "#";
                   if(!message.channel.guild) return;
 
                     if (message.content === prefix + "members") {
@@ -467,7 +467,7 @@ client.on("message", async message => {
       if(message.author.bot) return;
       if(message.channel.type === "dm") return;
 
-      let prefix = "BL!";
+      let prefix = "#";
       let messageArray = message.content.split (" ");
       let cmd = messageArray[0];
       let args = messageArray.slice(1);
@@ -505,7 +505,7 @@ client.on("message", async message => {
   if(message.author.bot) return;
   if(message.channel.type === "dm") return;
 
-  let prefix = "BL!";
+  let prefix = "#";
   let messageArray = message.content.split (" ");
   let cmd = messageArray[0];
   let args = messageArray.slice(1);
@@ -551,7 +551,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if(!message.channel.guild) return;
-if (message.content.startsWith('BL!ping')) {
+if (message.content.startsWith('#ping')) {
 if(!message.channel.guild) return;
 var msg = `${Date.now() - message.createdTimestamp}`
 var api = `${Math.round(client.ping)}`
@@ -647,7 +647,7 @@ client.on('message', message => {
    });
 
 client.on("message", msg => {
-  if(msg.content === 'BL!' + "profile") {
+  if(msg.content === '#' + "profile") {
       const embed = new Discord.RichEmbed();
   embed.addField("🔱| اسم الحساب :", `${msg.author.username}#${msg.author.discriminator}`, true)
           .addField("🆔| الاي دي :", `${msg.author.id}`, true)
@@ -725,7 +725,7 @@ client.on("message", message => {
 
 client.on('message', message => {
           let args = message.content.split(' ').slice(1);
-   if(message.content.split(' ')[0] == 'BL!color'){
+   if(message.content.split(' ')[0] == '#color'){
            const embedd = new Discord.RichEmbed()
      .setFooter('Requested by '+message.author.username, message.author.avatarURL)
    .setDescription(`**لا يوجد لون بهذا الأسم ** :x: `)
@@ -874,7 +874,7 @@ var mentionned = message.mentions.members.first();
 })
   
  client.on('message', message => {
-    if (message.content.startsWith("BL!myavatar")) {
+    if (message.content.startsWith("#myavatar")) {
         if (message.author.bot) return
         var mentionned = message.mentions.users.first();
     var omar;
@@ -1129,7 +1129,7 @@ message.channel.send(embed)
 });
    
 client.on('message', emoko => {
-  if (emoko.content === "BL!") {
+  if (emoko.content === "#") {
          if (!emoko.channel.guild) return emoko.reply('** This command only for servers **');  
          var currentTime = new Date(),
             hours = currentTime.getHours() + 4 ,
@@ -1362,14 +1362,14 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if(msg.content === 'BL!colors')
+  if(msg.content === '#colors')
               setTimeout(function() {  
 msg.reply('https://cdn.discordapp.com/avatars/347379495528824832/53c7bed44f53256ff633e8e2a36d68a3.png?size=2048')
               }, 1)
 });
 
 client.on('message', msg => {
-var prefix = "BL!";
+var prefix = "#";
   if(!msg.guild) return;
     if (msg.content.startsWith(prefix +'tt')) {
      let args = msg.content.split(" ").slice(1);
