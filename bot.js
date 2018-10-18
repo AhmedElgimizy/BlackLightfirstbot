@@ -163,7 +163,7 @@ client.on('message',message => {
 var cont = message.content.slice(prefix.length).split(" ");
 
   var args = cont.slice(1);
-       if (message.content.startsWith("BL!nick")) {
+       if (message.content.startsWith("#nick")) {
    let nickmention = message.mentions.users.first()
     if (message.mentions.users.size === 0) {
         if (message.member.permissions.has("CHANGE_NICKNAME")) {
@@ -204,7 +204,7 @@ client.on('message', message=> {
     if (message.author.bot) return;
     if (message.isMentioned(client.user))
     {
-    message.reply(" Hi my preifx is BL! ");
+    message.reply(" Hi my preifx is # ");
     }
 });
 
