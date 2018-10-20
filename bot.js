@@ -1722,7 +1722,14 @@ client.on("message", message => {
 client.on('message', msg => {
   if(msg.content === 'باك')
               setTimeout(function() {  
-msg.reply('وّلّلّّكّكّممّّ , نۨــۏڕٺ, ي مۭــڗ من ڙمۭــٰا̍نۨ عــڼۨــک :wave: :wave: ')
+msg.reply('وّلّلّّكّكّممّّ , نۨــۏڕٺ, ي مۭــڗ من ڙمۭــٰا̍نۨ عــڼۨــک :wave: :wave:')
+              }, 1)
+});
+
+client.on('message', msg => {
+  if(msg.content === 'باك')
+              setTimeout(function() {  
+msg.reply('وّلّلّّكّكّممّّ , نۨــۏڕٺ, ي مۭــڗ من ڙمۭــٰا̍نۨ عــڼۨــک')
               }, 1)
 });
 
