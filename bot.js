@@ -1719,37 +1719,5 @@ client.on("message", message => {
           }
       });
 
-client.on('message', msg => {
-  if(msg.content === 'باك')
-              setTimeout(function() {  
-msg.reply('وّلّلّّكّكّممّّ , نۨــۏڕٺ, ي مۭــڗ من ڙمۭــٰا̍نۨ عــڼۨــک :wave: :wave: 
-')
-              }, 1)
-});
-
-  client.on('message', msg => {
-  if(msg.content === 'برب'
-              setTimeout(function() {  
-msg.reply('وّلّلّّكّكّممّّ , نۨــۏڕٺ, ي مۭــڗ من ڙمۭــٰا̍نۨ عــڼۨــک :wave: :wave: 
-')
-              }, 1)
-});
-
-  client.on('message', msg => {
-  if(msg.content === 'برب'
-              setTimeout(function() {  
-msg.reply('ٺــٻۧــټ ڀــٰحۡــڷــﯡۥ لآتـطــۄڸ :disappointed_relieved: :broken_heart:
-')
-              }, 1)
-});
-
-      client.on('message', msg => {
-  if(msg.content === '.
-              setTimeout(function() {  
-msg.reply('أطلق ثبات وجودك :kissing_heart::kissing_heart:
-
-')
-              }, 1)
-});
 
 client.login(process.env.BOT_TOKEN);
