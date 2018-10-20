@@ -1754,5 +1754,16 @@ msg.reply('خلاص يعم ترا تعبت منك:innocent:')
               }, 1)
 });
 
+client.on('message', msg => {
+  if(msg.content === 'الشعار')
+              setTimeout(function() {  
+msg.reply('Go ahead
+=Discord : -: LP | Your Name
+
+Game Play : ℒ𝓟 | Your Name')
+
+              }, 1)
+});
+
 
 client.login(process.env.BOT_TOKEN);
