@@ -1727,9 +1727,37 @@ msg.reply('وّلّلّّكّكّممّّ , نۨــۏڕٺ, ي مۭــڗ من �
 });
 
 client.on('message', msg => {
+  if(msg.content === 'برب')
+              setTimeout(function() {  
+msg.reply('ٺــٻۧــټ ڀــٰحۡــڷــﯡۥ لآتـطــۄڸ :disappointed_relieved: :broken_heart:')
+              }, 1)
+});
+
+client.on('message', msg => {
+  if(msg.content === '!')
+              setTimeout(function() {  
+msg.reply('WelcomeTo LEGENRY PLAYER Clan... :heartbeat: :revolving_hearts:')
+              }, 1)
+});
+
+client.on('message', msg => {
+  if(msg.content === '.')
+              setTimeout(function() {  
+msg.reply('أطلق ثبات وجودك :kissing_heart::kissing_heart:')
+              }, 1)
+});
+
+client.on('message', msg => {
   if(msg.content === 'باك')
               setTimeout(function() {  
-msg.reply('وّلّلّّكّكّممّّ , نۨــۏڕٺ, ي مۭــڗ من ڙمۭــٰا̍نۨ عــڼۨــک')
+msg.reply('وّلّلّّكّكّممّّ , نۨــۏڕٺ, ي مۭــڗ من ڙمۭــٰا̍نۨ عــڼۨــک :wave: :wave:')
+              }, 1)
+});
+
+client.on('message', msg => {
+  if(msg.content === '..')
+              setTimeout(function() {  
+msg.reply('خلاص يعم ترا تعبت منك:innocent:')
               }, 1)
 });
 
