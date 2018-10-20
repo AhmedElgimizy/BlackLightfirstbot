@@ -1748,13 +1748,6 @@ msg.reply('أطلق ثبات وجودك :kissing_heart::kissing_heart:')
 });
 
 client.on('message', msg => {
-  if(msg.content === 'باك')
-              setTimeout(function() {  
-msg.reply('وّلّلّّكّكّممّّ , نۨــۏڕٺ, ي مۭــڗ من ڙمۭــٰا̍نۨ عــڼۨــک :wave: :wave:')
-              }, 1)
-});
-
-client.on('message', msg => {
   if(msg.content === '..')
               setTimeout(function() {  
 msg.reply('خلاص يعم ترا تعبت منك:innocent:')
