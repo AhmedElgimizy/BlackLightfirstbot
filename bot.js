@@ -1758,7 +1758,6 @@ client.on('message', msg => {
   if(msg.content === 'الشعار')
               setTimeout(function() {  
 msg.reply('Go ahead =Discord : -: LP | Your Name ..... Game Play : ℒ𝓟 | Your Name')
-
               }, 1)
 });
 
