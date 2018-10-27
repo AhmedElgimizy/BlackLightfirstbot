@@ -4,7 +4,7 @@ const prefix = '#'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(online,"http://twitch.tv/S-F")
+client.user.setGame(`الكود هنا تويتش اكتب اسم اللعبة يلي تبيها`,"https://www.twitch.tv/idk")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
