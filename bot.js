@@ -1779,4 +1779,24 @@ client.on('message', msg => {
         }
 })
 
+client.on('message', message => {
+  if (message.author.bot) return;
+  if (!message.content.startsWith(prefix)) return;
+
+  let command = message.content.split(" ")[0];
+  command = command.slice(prefix.length);
+
+  let args = message.content.split(" ").slice(1);
+  
+ 
+
+if (command == "z5rf") {
+    let say = new Discord.RichEmbed()
+    .setTitle('Text emboss :')
+
+   message.reply(`\n ${zalgo(args.join(' '))}`);
+  }
+
+});
+
 client.login(process.env.BOT_TOKEN);
