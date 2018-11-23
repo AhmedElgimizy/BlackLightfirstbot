@@ -2593,6 +2593,34 @@ client.on('message', function(message) {
     }
     }
 })
+ 
+client.on('message', message => {
+                 if(message.content.startsWith("#clearr")) {
+                     var args = message.content.split(" ").slice(1);
+             if (!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('You need MANAGE_MESSAGES permission noob');
+              if (!args[0]) return message.channel.send('  مثل .clear 1 ضح عدد الرسائل التى تريد مسحها!!!');
+
+              message.channel.bulkDelete(args[0]).then(() => {
+                const embed = new Discord.RichEmbed()
+                  .setColor(0xF16104)
+                  .setDescription(`Cleared ${args[0]} messages.`);
+                message.channel.send({ embed });
+
+                const actionlog = message.guild.channels.find('name', 'logs');
+
+                if (!actionlog) return message.channel.send('تم المسح بنجاح');
+                const embedlog = new Discord.RichEmbed()
+                  .setDescription('~Purge~')
+                  .setColor(0xF16104)
+                  .addField('Purged By', `<@${message.author.id}> with ID ${message.author.id}`)
+                  .addField('Purged in', message.channel)
+                  .addField('Time', message.createdAt);
+                actionlog.send(embedlog);
+
+              });
+            };
+
+            });
 
 
 client.login(process.env.BOT_TOKEN);
