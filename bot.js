@@ -1815,7 +1815,6 @@ client.on('guildMemberAdd', eyad => {
     channel.sendEmbed(embed);
   });
  
-
 client.on('guildMemberRemove', eyad => {
   let channel = eyad.guild.channels.find('name', 'log');
   let memberavatar = eyad.user.avatarURL
@@ -1875,7 +1874,6 @@ client.on('messageUpdate', (oldMessage, newMessage) => {
  
     logChannel.send(messageUpdate);
 });
- 
  
 // Roles Logs
 client.on('roleCreate', role => {
