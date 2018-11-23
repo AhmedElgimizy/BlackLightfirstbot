@@ -540,16 +540,6 @@ client.on("message", async message => {
     });
 
 client.on('message', message => {
-            if (message.content.startsWith("BL!help")) {
-     let embed = new Discord.RichEmbed()
-.setThumbnail(message.author.avatarURL)
-.addField('     Help ' ,' تم ارسال الاوامر الي الخاص ✉  ')
-.setColor('#B101FC')
-  message.channel.sendEmbed(embed);
-    }
-});
-
-client.on('message', message => {
     if(!message.channel.guild) return;
 if (message.content.startsWith('#ping')) {
 if(!message.channel.guild) return;
@@ -567,7 +557,7 @@ message.channel.send({embed:embed});
 
 client.on ("guildMemberAdd", member => {
   
-   var role = member.guild.roles.find ("Member", "اسم الرتبة");
+   var role = member.guild.roles.find ("BlackLight", "اسم الرتبة");
    member.addRole (role);
   
 })
@@ -947,7 +937,7 @@ client.on('guildMemberAdd', Sal => { //By Salto7#4595
                                    
 client.on('message', async message => {
     var command = message.content.toLowerCase().split(" ")[0];
-    var prefix = 'BL!';// Alpha Codes
+    var prefix = '#';// Alpha Codes
     var name = '';// Alpha Codes
     var age = '';// Alpha Codes
     var fromwhere = '';// Alpha Codes
@@ -1108,7 +1098,7 @@ client.on("message", message => {
 
  client.on('message', message => {
      if(!message.channel.guild) return;
-var prefix = "BL!";
+var prefix = "#";
                 if(message.content.startsWith(prefix + 'allbots')) {
 
     
