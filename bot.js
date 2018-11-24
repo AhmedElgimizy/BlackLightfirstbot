@@ -2736,6 +2736,13 @@ B.react('🇧🇭').then(() => B.react('🇧🇭'))
                                    
  });
 
-
+client.on('message',async message => {
+if(message.author.bot) return;
+if(message.channel.type === 'dm') return
+  if(message.content.startsWith(prefix + "cs")) {
+    message.channel.send(`**Server ${message.guild.name} Colors list:**\n\`\`\`\n` + message.guild.roles.filter(role => role.name.match(/[0-9]/g)).sort((a,b) => b.position - a.position).map(ro => ro.name).join(' , ') + '
+');
+  }
+});
 
 client.login(process.env.BOT_TOKEN);
