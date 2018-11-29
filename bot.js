@@ -2980,4 +2980,20 @@ if (message.content.startsWith(prefix + 'perms')) { // الامر
 });
 
 
+client.on('message', async message => {
+  if(message.content.startsWith(prefix + "js")) {
+  await  message.channel.send(`اكتب`)
+    let filter = m => m.author.id === message.author.id
+      var text = '';
+        let sugsa = message.channel.awaitMessages(filter, { max: 1, time: 60000})
+          .then(co => {
+            text = co.first().content
+
+              message.channel.send(`تم النشر`)
+                client.channels.get("517702509700317205").send(`${message.author.username}'s said => ${text}`)
+
+              })
+            }
+          })
+
 client.login(process.env.BOT_TOKEN);
