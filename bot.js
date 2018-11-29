@@ -2955,4 +2955,14 @@ client.on('message', message => {
     }
 });
 
+client.on('message', message => {
+    if(message.content.includes('discord.gg')){
+                                            if(!message.channel.guild) return message.reply('** advertising me on DM ? 🤔   **');
+        if (!message.member.hasPermissions(['ADMINISTRATOR'])){
+        message.delete()
+    return message.reply(`** ممنوع نشر الروابط :angry: ! **`)
+    }
+}
+});
+
 client.login(process.env.BOT_TOKEN);
