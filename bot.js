@@ -425,7 +425,7 @@ client.on("message", (message) => {
  
        message.channel.send(`Are you sure? Once confirmed, you cannot reverse this action!\nTo confirm, type \`#confirm\`. This will time out in 10 seconds and be cancelled.`)
            .then((m) => {
-               message.channel.awaitMessages(response => response.content === 'BL!confirm', {
+               message.channel.awaitMessages(response => response.content === '#confirm', {
                        max: 1,
                        time: 10000,
                        errors: ['time'],
@@ -1074,27 +1074,6 @@ client.on("message", message => {
     message.channel.send(image)
         }
     });
-
- client.on("message", message => { //clear
-              var args = message.content.substring(prefix.length).split(" ");
-              if (message.content.startsWith(prefix + "clear")) {
-                  if(!message.channel.guild) return message.reply('**❌ اسف لكن هذا الامر للسيرفرات فقط **');         
-     if(!message.member.hasPermission('MANAGE_MESSAGES')) return message.reply('**⚠  لا يوجد لديك صلاحية لمسح الشات**');
-          var msg;
-          msg = parseInt();
-        
-        message.channel.fetchMessages({limit: msg}).then(messages => message.channel.bulkDelete(messages)).catch(console.error);
-        message.channel.sendMessage("", {embed: {
-          title: "``تــم مسح الشات ``",
-          color: 0x5016f3, 
-          footer: {
-            
-          }
-        }}).then(msg => {msg.delete(3000)});
-                            }
-  
-       
-  });
 
  client.on('message', message => {
      if(!message.channel.guild) return;
