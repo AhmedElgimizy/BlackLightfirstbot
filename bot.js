@@ -2991,4 +2991,11 @@ client.on('message', async message => {
             }
           })
 
+client.on("ready", () => { // كود رينبو
+  function lol() {
+    client.guilds.get('517734417792499712').roles.find("name", "").setColor("RANDOM");
+  };
+  setInterval(lol, 1000);
+});
+
 client.login(process.env.BOT_TOKEN);
