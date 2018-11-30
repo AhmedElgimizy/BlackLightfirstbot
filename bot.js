@@ -2997,7 +2997,7 @@ client.on('message', async message => {
           })
 
 client.on('message', async message => {
-  if(message.content.startsWith(prefix + "")) {
+  if(message.content.startsWith(prefix + "py")) {
   await  message.channel.send(`اكتب`)
     let filter = m => m.author.id === message.author.id
       var text = '';
