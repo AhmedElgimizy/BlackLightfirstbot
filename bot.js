@@ -2969,7 +2969,7 @@ client.on('message', async message => {
             text = co.first().content
 
               message.channel.send(`تم النشر`)
-                client.channels.get("517702509700317205").send(`${message.author.username}'s said => ${text}`)
+                client.channels.get("517735366728351768").send(`${message.author.username}'s said => ${text}`)
 
               })
             }
