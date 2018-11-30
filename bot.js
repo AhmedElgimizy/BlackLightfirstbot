@@ -2985,7 +2985,7 @@ client.on('message', async message => {
             text = co.first().content
 
               message.channel.send(`تم النشر`)
-                client.channels.get("517735572257898496").send(`${message.author.username}'s said => ${text}`)
+                client.channels.get("517735572257898496").send(`${message.author.username} BlackLight codes ${text}`)
 
               })
             }
