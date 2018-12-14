@@ -3035,5 +3035,22 @@ message.channel.sendFile(canvas.toBuffer());
 
 });
 
+client.on("message", message => {
+             
+          if(!message.channel.guild) return;
+   if(message.author.bot) return;
+      if(message.content === "ع "){
+          const embed = new Discord.RichEmbed()
+ 
+      .setTitle(`This Is The Logo Of : ** ${message.guild.name} **`)
+  .setAuthor(message.author.username, message.guild.iconrURL)
+    .setColor(0x164fe3)
+    .setImage(message.guild.iconURL)
+    .setURL(message.guild.iconrURL)
+                    .setTimestamp()
+ 
+   message.channel.send({embed});
+      }
+  });
 
 client.login(process.env.BOT_TOKEN);
