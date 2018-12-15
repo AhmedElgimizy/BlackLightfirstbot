@@ -3055,7 +3055,7 @@ client.on("message", message => {
 
 
 client.on("message", message => {
-            if(message.content.startsWith("#تقديم على ")) {
+            if(message.content.startsWith("#joinsupport")) {
         if(!message.channel.guild) return;
                 if(message.author.bot) return;
         let channel = message.guild.channels.find("name", "التقديمات")///n3k4a is one  
