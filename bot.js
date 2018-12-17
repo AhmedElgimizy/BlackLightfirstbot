@@ -3052,14 +3052,6 @@ client.on("message", message => {
    message.channel.send({embed});
       }
   });
-
-client.on("guildMemberAdd", member => {
-  member.createDM().then(function (channel) {
-  return channel.send(`ولكم نورت السيرفر
- ${member}  
- `) 
-}).catch(console.error)
-}
        
 client.on("message", message => {
   if(message.content.startsWith("#تفعيل")) { // الامر والبريفكس
