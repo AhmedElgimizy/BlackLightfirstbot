@@ -3065,7 +3065,7 @@ client.on("message", message => {
       }).then(collected => {
         message.delete();
         m.delete();
-        message.member.addRole(message.guild.roles.find(c => c.name == "Members")); // اسم الرتبة
+        message.member.addRole(message.guild.roles.find(c => c.name == "Mems")); // اسم الرتبة
       }).catch(() => {
         m.edit(`لقد أخذت وقتًا طويلاً لكتابة الرقم.  قم بإعادة كتابة الأمر مرة أخرى إذا كنت تريد التحقق من هويتك..`).then(m2 => m.delete(15000));
       });
