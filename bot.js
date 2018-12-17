@@ -3052,25 +3052,7 @@ client.on("message", message => {
    message.channel.send({embed});
       }
   });
-       
-client.on("message", message => {
-  if(message.content.startsWith("#تفعيل")) { // الامر والبريفكس
-    let num = Math.floor((Math.random() * 4783) + 10);
- 
-        message.channel.send(`**يرجاء كتابة الرقم التالي:** **${num}**`).then(m => {
-      message.channel.awaitMessages(res => res.content == `${num}`, {
-        max: 1,
-        time: 60000,
-        errors: ['time'],
-      }).then(collected => {
-        message.delete();
-        m.delete();
-        message.member.addRole(message.guild.roles.find(c => c.name == "BlackLight")); // اسم الرتبة
-      }).catch(() => {
-        m.edit(`لقد أخذت وقتًا طويلاً لكتابة الرقم.  قم بإعادة كتابة الأمر مرة أخرى إذا كنت تريد التحقق من هويتك..`).then(m2 => m.delete(15000));
-      });
-    });
-  }
-}
+      
+
 
 client.login(process.env.BOT_TOKEN);
