@@ -28,7 +28,7 @@ client.user.setGame(`nothing `,"PLAYING")
   console.log('')
 });
 
-const adminprefix = "#";
+const adminprefix = "BL!";
 const devs = ['515548995733684225'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
