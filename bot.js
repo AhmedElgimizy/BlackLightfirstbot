@@ -27,6 +27,7 @@ client.user.setGame(`nothing `,"PLAYING")
   console.log('')
   console.log('')
 });
+
 const adminprefix = "#";
 const devs = ['515548995733684225'];
 client.on('message', message => {
