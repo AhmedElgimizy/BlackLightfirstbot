@@ -28,8 +28,8 @@ client.user.setGame(`nothing `,"PLAYING")
   console.log('')
 });
 
-const adminprefix = "BL!";
-const devs = ['515548995733684225'];
+const adminprefix = "#";
+const devs = ['527965519685615637'];
 client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
@@ -3074,7 +3074,7 @@ client.on("message", message => {
   }
 });
 
-const developers = ["527622425840582676"]//Toxic Codes
+const developers = ["527965519685615637"]//Toxic Codes
 
 client.on('message', message => {//Toxic Codes
 
