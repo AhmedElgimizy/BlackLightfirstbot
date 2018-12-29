@@ -4,7 +4,7 @@ const prefix = '#'
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`nothing `,"PLAYING")
+client.user.setGame(`BlackLight `,"PLAYING")
   console.log('')
   console.log('')
   console.log('╔[═════════════════════════════════════════════════════════════════]╗')
@@ -3147,6 +3147,57 @@ if (message.content.startsWith(adminprefix + 'setavatar')) {//Toxic Codes
 }
 
 });//Toxic Codes
+
+client.on('message',async message => {/Toxic Codes
+ var prefix = "#"
+let mention = message.mentions.members.first();/Toxic Codes
+ 
+let Room = client.channels.get('508678457711132683');/Toxic Codes
+ 
+if(message.content.startsWith(prefix + "قبول")) {/Toxic Codes
+ 
+if(message.guild.id !== '500408052306935810') return;
+ 
+ if (!message.member.hasPermission("MANAGE_ROLES")) return message.reply("**للأسف ليس لديك صلاحية**").then(msg => msg.delete(5000));
+ 
+ 
+if(!mention) return message.reply("منشن شخص");/Toxic Codes
+ 
+ 
+ 
+Room.send(`
+**» العضو :** ${mention}/Toxic Codes
+[ :white_check_mark: ] :: لقد تم قبول العضو `);/Toxic Codes
+ 
+}
+ 
+});
+
+
+client.on('message',async message => {/Toxic Codes
+ var prefix = "#"
+let mention = message.mentions.members.first();/Toxic Codes
+ 
+let Room = client.channels.get('508678457711132683');/Toxic Codes
+ 
+if(message.content.startsWith(prefix + 'ل")) {/Toxic Codes
+ 
+if(message.guild.id !== '500408052306935810') return;
+ 
+ if (!message.member.hasPermission("MANAGE_ROLES")) return message.reply("**للأسف ليس لديك صلاحية**").then(msg => msg.delete(5000));
+ 
+ 
+if(!mention) return message.reply("منشن شخص");/Toxic Codes
+ 
+ 
+ 
+Room.send(`
+**» العضو :** ${mention}/Toxic Codes
+[ :white_check_mark: ] :: لقد تم رفض العضو `);/Toxic Codes
+ 
+}
+ 
+});
 
 
 
