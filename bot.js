@@ -3173,14 +3173,13 @@ Room.send(`
  
 });
 
-
 client.on('message',async message => {/Toxic Codes
  var prefix = "#"
 let mention = message.mentions.members.first();/Toxic Codes
  
 let Room = client.channels.get('508678457711132683');/Toxic Codes
  
-if(message.content.startsWith(prefix + 'ل")) {/Toxic Codes
+if(message.content.startsWith(prefix + 'رفض")) {/Toxic Codes
  
 if(message.guild.id !== '500408052306935810') return;
  
