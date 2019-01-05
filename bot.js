@@ -146,7 +146,7 @@ BL!slots
     }
 });
 
-ient.on('message',message => {
+cient.on('message',message => {
          if (!message.content.startsWith(prefix)) return;
 var cont = message.content.slice(prefix.length).split(" ");
 
