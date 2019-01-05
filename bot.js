@@ -26,7 +26,7 @@ client.on('ready', () => {
   console.log('')
   console.log('')
 
-  const developers = ["ايدي الاونر"]//Toxic Codes
+  const developers = ["531239769158713378"]//Toxic Codes
 client.on('message', message => {//Toxic Codes
     var argresult = message.content.split(` `).slice(1).join(' ');//Toxic Codes
       if (!developers.includes(message.author.id)) return;
