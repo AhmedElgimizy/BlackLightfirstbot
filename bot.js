@@ -146,20 +146,7 @@ BL!slots
     }
 });
 
-var botid = ["491985375934283786"];
-   client.on('message', message => {
-       if(message.content.startsWith(`${prefix}invite`)){
-           if(!message.channel.guild) return message.channel.send("This Command is Just For Servers!")
-           var embed = new Discord.RichEmbed()
-           .setTitle("Invite Me !.")
-           .setURL(`https://discordapp.com/oauth2/authorize/?permissions=8&scope=bot&client_id=${botid}`)
-           .setTimestamp()
-           .setColor("RANDOM")
-           message.channel.send({embed})
-       }
-   });
-
-client.on('message',message => {
+ient.on('message',message => {
          if (!message.content.startsWith(prefix)) return;
 var cont = message.content.slice(prefix.length).split(" ");
 
@@ -208,71 +195,6 @@ client.on('message', message=> {
     message.reply(" Hi my preifx is # ");
     }
 });
-
-client.on('message' , message => {
-  var prefix = "#";
-  if(message.author.bot) return;
- 
-  if(message.content.startsWith(prefix + "xo")) {
- let array_of_mentions = message.mentions.users.array();
-  let symbols = [':o:', ':heavy_multiplication_x:']
-  var grid_message;
- 
-  if (array_of_mentions.length == 1 || array_of_mentions.length == 2) {
-    let random1 = Math.floor(Math.random() * (1 - 0 + 1)) + 0;
-    let random2 = Math.abs(random1 - 1);
-    if (array_of_mentions.length == 1) {
-      random1 = 0;
-      random2 = 0;
-    }
-    let player1_id = array_of_mentions[random1].id;
-    let player2_id = array_of_mentions[random2].id;
-    var turn_id = player1_id;
-    var symbol = symbols[0];
-    let initial_message = `Game match between <@${player1_id}> and <@${player2_id}>!`;
-    if (player1_id == player2_id) {
-      initial_message += '\n_( playing this game with yourself :joy:)_'
-    }
-    message.channel.send(`Xo ${initial_message}`)
-    .then(console.log("Successful tictactoe introduction"))
-    .catch(console.error);
-    message.channel.send(':one::two::three:' + '\n' +
-                         ':four::five::six:' + '\n' +
-                         ':seven::eight::nine:')
-    .then((new_message) => {
-      grid_message = new_message;
-    })
-    .then(console.log("Successful tictactoe game initialization"))
-    .catch(console.error);
-    message.channel.send('Loading... Please wait for the :ok: reaction.')
-    .then(async (new_message) => {
-      await new_message.react('1⃣');
-      await new_message.react('2⃣');
-      await new_message.react('3⃣');
-      await new_message.react('4⃣');
-      await new_message.react('5⃣');
-      await new_message.react('6⃣');
-      await new_message.react('7⃣');
-      await new_message.react('8⃣');
-      await new_message.react('9⃣');
-      await new_message.react('🆗');
-      await new_message.edit(`It\'s <@${turn_id}>\'s turn! Your symbol is ${symbol}`)
-      .then((new_new_message) => {
-        require('./xo.js')(client, message, new_new_message, player1_id, player2_id, turn_id, symbol, symbols, grid_message);
-      })
-      .then(console.log("Successful tictactoe listener initialization"))
-      .catch(console.error);
-    })
-    .then(console.log("Successful tictactoe react initialization"))
-    .catch(console.error);
-  }
-  else {
-    message.reply(` :anger: \`Use : ${prefix}xo @player1 @player2\``)
-    .then(console.log("Successful error reply"))
-    .catch(console.error);
-  }
-}
- });
 
 client.on('message', message => {
     if (message.content == "#امثال") {
@@ -611,7 +533,7 @@ const pubg = [
 ]
    client.on('message', message => {
        if (message.author.bot) return;
- if (message.content.startsWith('BL!pubg')) {
+ if (message.content.startsWith('#pubg')) {
      if(!message.channel.guild) return message.reply('** This command only for servers **');
   var client= new Discord.RichEmbed()
   .setTitle("لعبه اسئله باتل جرواند")
@@ -1099,7 +1021,7 @@ message.channel.send(embed)
 });
    
 client.on('message', emoko => {
-  if (emoko.content === "#") {
+  if (emoko.content === ""#time) {
          if (!emoko.channel.guild) return emoko.reply('** This command only for servers **');  
          var currentTime = new Date(),
             hours = currentTime.getHours() + 4 ,
@@ -1164,7 +1086,7 @@ const embed = new Discord.RichEmbed()
 });
 
 client.on('message', message => {
-    if (message.content === "BL!serooms") {
+    if (message.content === "#setrooms") {
     if(!message.channel.guild) return message.channel.send('**This Command Only For Servers !**')
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.channel.send(`**${message.author.username} You Dont Have** ``MANAGE_CHANNELS`` **Premission**`);
 
@@ -1225,7 +1147,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-    if (message.content === "BL!createroles") {
+    if (message.content === "#setroles") {
     if(!message.channel.guild) return message.channel.send('**This Command Only For Servers !**')
             if (!message.member.hasPermission('MANAGE_ROLES')) return message.channel.send(`**${message.author.username} You Dont Have** ``MANAGE_ROLES`` **Premission**`);
 
