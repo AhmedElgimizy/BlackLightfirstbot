@@ -1,6 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-var prefix = "#"// البرفكس هنا
+var prefix = "BL!"// البرفكس هنا
 
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
@@ -65,7 +65,7 @@ if (message.content.startsWith(adminprefix + 'setavatar')) {//Toxic Codes
 });//Toxic Codes
   
 client.on('message', message => {
-    var prefix = "#";
+    var prefix = "BL!";
   if (message.author.x5bz) return;
   if (!message.content.startsWith(prefix)) return;
  
