@@ -26,8 +26,10 @@ client.on('ready', () => {
   console.log('')
 });///الكود فوق ذي
  
+ 
+
  const developers = ["408611591710310410", "347379495528824832"]
-const adminprefix = '$'
+const adminprefix = '#'
 client.on('message', message => {
     var argresult = message.content.split(`).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
@@ -57,7 +59,7 @@ client.on('message', message => {
 } else
 if (message.content.startsWith(adminprefix + 'setava')) {
   client.user.setAvatar(argresult);
-    message.channel.send(Changing The Avatar To :${argresult} `);
+    message.channel.send(Changing The Avatar To :${argresult} );
 }
 });
 
