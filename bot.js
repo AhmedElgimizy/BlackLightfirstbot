@@ -24,8 +24,6 @@ client.on('ready', () => {
   console.log(' Bot Is Online')
   console.log('╚[════════════]╝')
   console.log('')
-
-  
 });///الكود فوق ذي
  
  
