@@ -392,21 +392,15 @@ client.on('message', message => {
 }
 });
 
-client.on('message', async message => {
-  if(message.content.startsWith(prefix + "js")) {
-  await  message.channel.send(`اكتب`)
-    let filter = m => m.author.id === message.author.id
-      var text = '';
-        let sugsa = message.channel.awaitMessages(filter, { max: 1, time: 60000})
-          .then(co => {
-            text = co.first().content
-
-              message.channel.send(`تم النشر`)
-                client.channels.get("517735366728351768").send(`${message.author.username}'s said => ${text}`)
-
-              })
-            }
-          })
+client.on('guildMemberAdd', member => {
+  member.guild.fetchInvites().then(guildInvites => {
+    const ei = invites[member.guild.id];
+    const invite = guildInvites.find(i => ei.get(i.code).uses < i.uses);
+    const inviter = client.users.get(invite.inviter.id);
+    const channel = member.guild.channels.find("name", "welcome");
+     channel.send(`<@${member.user.id}> ** joined; ** Invited by ** <@${inviter.id}> ** `);
+  });
+});
 
 
 client.login(process.env.BOT_TOKEN);
