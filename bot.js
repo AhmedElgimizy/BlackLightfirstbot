@@ -299,4 +299,17 @@ client.on('message', message => {
   }
 });
 
+client.on('message',async msg => {//Toxic Codes
+  var p = "#";//Toxic Codes
+  if(msg.content.startsWith(p + "setuser")) {//Toxic Codes
+  if(!msg.guild.member(msg.author).hasPermissions('MANAGE_CHANNELS')) return msg.reply('❌ **ليس لديك صلاحيه**');//Toxic Codes
+  if(!msg.guild.member(client.user).hasPermissions(['MANAGE_CHANNELS'])) return msg.reply('❌ **البوت لا يمتلك صلاحية**');//Toxic Codes
+  msg.guild.createChannel(`Members : ◤ → ${client.users.size} ← ◢` , 'voice').then(time => {//Toxic Codes
+    });//Toxic Codes
+
+  }
+ 
+});
+
+
 client.login(process.env.BOT_TOKEN);
