@@ -407,7 +407,4 @@ client.user.setGame(`Minton 4Ever`,`https://twitch.tv/ichbinxirdx`)
 });
 
 
-
-
-
 client.login(process.eenv.BOT_TOKEN);
