@@ -386,7 +386,7 @@ client.on('message', message => {
             .addField('**Channels**📝 :' , `[ ${client.channels.size} ]` , true)
             .addField('**Users**🔮 :' ,`[ ${client.users.size} ]` , true)
             .addField('**Bot Name**🔰 :' , `[ ${client.user.tag} ]` , true)
-            .addField('**Bot Owner**👑 :' , `[<@ايدي حقك>]` , true)
+            .addField('**Bot Owner**👑 :' , `[<@347379495528824832>]` , true)
             .setFooter(message.author.username, message.author.avatarURL)
     })
 }
